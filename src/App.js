@@ -1,9 +1,19 @@
 import './App.css';
-import Employeesdata from './component/employeesdata';
+import React,{useState} from 'react';
+// import Employeesdata from './component/employeesdata';
+import Newemployee from './component/newemployee';
+// import Employeeform from './component/employeeform';
 
 
 function App() {
-  const employees= [
+  const [value,setvalue] =useState('');
+  const handlecallback = (event) =>{
+    setvalue({value:event});
+    console.log(value);
+
+  }
+
+   /**  const employees= [
     {
       id: 'e1',
       name: 'Akhil',
@@ -34,11 +44,11 @@ function App() {
       name: 'Puneet',
       age: 25
     },
-  ];
+  ];*/
 
   return (
     <>
-    <Employeesdata data={employees}/>
+     <Newemployee value={handlecallback}/>
 
     </>
 
