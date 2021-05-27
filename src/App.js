@@ -3,7 +3,8 @@ import React,{useState} from 'react';
 // import Employeesdata from './component/employeesdata';
 import Newemployee from './component/newemployee';
 // import Employeeform from './component/employeeform';
-
+import Employeefilter from './component/employeefilter';
+//import Employee from './component/employee';
 
 function App() {
   const [value,setvalue] =useState('');
@@ -49,8 +50,12 @@ function App() {
   return (
     <>
      <Newemployee value={handlecallback}/>
+     <br></br>
+     <Employeefilter/>
+
 
     </>
+
 
   );
 }
