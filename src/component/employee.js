@@ -1,14 +1,13 @@
 import React,{useState} from 'react';
 
 export default function Employee(props){
-  const[age,setage] = useState('');
+  const array = ['all',22,23,24,25,6,7,8,10,100];
+  const[age,setage] = useState(0,'all');
   function submit(e){
     e.preventDefault();
-    console.log(age);
-    props.value(age)
+    props.SaveAge(age)
 
   }
-  const array = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40];
   return(
     <div>
          <div class="input-group-mb-3">

@@ -1,15 +1,14 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Employeeform from './employeeform';
 
 export default function NewEmployee(props){
-  const [data,setdata] =useState('');
-  const handlecallback = (event) =>{
-    setdata({data:event});
-    props.value(data)
-  }
+  //const [data,setdata] =useState('');
+  //const handlecallback = (event) =>{
+  //  setdata({data:event});
+  //  props.value(data)
   return(
     <div>
-      <Employeeform details = {handlecallback}/>
+      <Employeeform saveDetails = {props.saveDetails}/>
     </div>
   )
 }
